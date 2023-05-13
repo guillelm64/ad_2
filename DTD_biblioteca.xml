@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libros, revistas, periodicos)>
+    
+    <!ELEMENT libros (libro+)>
+    <!ELEMENT revistas (revista+)>
+    <!ELEMENT periodicos (periodico+)>
+
+    <!ELEMENT libro (titulo, capitulos, indice?, sinopsis)>
+    <!ATTLIST libro id ID #REQUIRED tipo_clase (novela|infantil|didactico) #REQUIRED num_paginas CDATA #IMPLIED >
+
+    <!ELEMENT titulo (#PCDATA) >
+    <!ELEMENT capitulos (capitulo+)>
+    <!ELEMENT indice (#PCDATA) >
+    <!ELEMENT sinopsis (#PCDATA) >
+
+    <!ELEMENT capitulo (titulo_2, contenido)>
+    <!ATTLIST capitulo num_paginas CDATA #IMPLIED >
+
+    <!ELEMENT titulo_2 (#PCDATA) >
+    <!ELEMENT contenido EMPTY>
+    <!ATTLIST contenido enlace CDATA #REQUIRED>
+
+
+    <!ELEMENT revista (titulo_rev, num_revista, indice?, secciones)>
+    <!ATTLIST revista id ID #REQUIRED
+                        tipo_clase (coches|investigacion|corazon|otras|informatica) #REQUIRED num_paginas CDATA #IMPLIED >
+
+    <!ELEMENT titulo_rev (#PCDATA) >
+    <!ELEMENT num_revista (#PCDATA) >
+    <!ELEMENT secciones (seccion+) >
+    
+    <!ELEMENT seccion (contenido) >
+    <!ATTLIST seccion num_paginas CDATA #IMPLIED >
+
+
+    <!ELEMENT periodico (secciones_per, indice?)>
+    <!ATTLIST periodico id ID #REQUIRED tipo_clase (nacionales|internacionales) #REQUIRED fec_publi CDATA #IMPLIED >
+
+    <!ELEMENT secciones_per (seccion_per+) >
+    
+    <!ELEMENT seccion_per (articulos) >
+    <!ATTLIST seccion_per tipo (deportes|economica|opinion|nacional|internacional) #REQUIRED>
+
+    <!ELEMENT articulos (articulo+) >
+    
+    <!ELEMENT articulo (contenido) >
+    <!ATTLIST articulo autor CDATA #REQUIRED >
+
+]>
+
+
+<biblioteca>
+    <libros>
+        <libro id="L0001" tipo_clase="novela" num_paginas="238">
+            <titulo>El cobertijo azul</titulo>
+            <capitulos>
+                <capitulo num_paginas="20">
+                    <titulo_2>Tio Joe</titulo_2>
+                    <contenido enlace="https://informacion.com/joe"/>
+                </capitulo>
+                <capitulo num_paginas="23">
+                    <titulo_2>Tia Anne</titulo_2>
+                    <contenido enlace="https://informacion.com/anne"/>
+                </capitulo>
+                <capitulo num_paginas="19">
+                    <titulo_2>Primo Jack</titulo_2>
+                    <contenido enlace="https://informacion.com/jack"/>
+                </capitulo>
+            </capitulos>
+            <indice></indice>
+            <sinopsis>La vida de Brian estaba toamndo forma cuando...</sinopsis>
+        </libro>
+        <libro id="L0002" tipo_clase="infantil" num_paginas="25">
+            <titulo>El pollo rosa</titulo>
+            <capitulos>
+                <capitulo num_paginas="4">
+                    <titulo_2>Cole nuevo</titulo_2>
+                    <contenido enlace="https://informacion_2.com/cole"/>
+                </capitulo>
+                <capitulo num_paginas="7">
+                    <titulo_2>Nuevo amigo</titulo_2>
+                    <contenido enlace="https://informacion_2.com/amigo"/>
+                </capitulo>
+                <capitulo num_paginas="6">
+                    <titulo_2>El cumpleaños</titulo_2>
+                    <contenido enlace="https://informacion_2.com/cumple"/>
+                </capitulo>
+            </capitulos>
+            <indice></indice>
+            <sinopsis>El Pollo Rosa es un cuento infantil pensado para...</sinopsis>
+        </libro>
+        <libro id="L0003" tipo_clase="didactico" num_paginas="538">
+            <titulo>Secretos del Universo</titulo>
+            <capitulos>
+                <capitulo num_paginas="56">
+                    <titulo_2>La mota de polvo</titulo_2>
+                    <contenido enlace="https://informacion_3.com/polvo"/>
+                </capitulo>
+                <capitulo num_paginas="63">
+                    <titulo_2>¿Fue una explosión?</titulo_2>
+                    <contenido enlace="https://informacion_3.com/explosion"/>
+                </capitulo>
+                <capitulo num_paginas="43">
+                    <titulo_2>Mas rapido que la velocidad de la luz</titulo_2>
+                    <contenido enlace="https://informacion_3.com/laluz"/>
+                </capitulo>
+            </capitulos>
+            <indice></indice>
+            <sinopsis>Este libro descubrirá la insmensidad del desconocimiento sobre...</sinopsis>
+        </libro>
+    </libros>
+    <revistas>
+        <revista id="R01" tipo_clase="investigacion" num_paginas="89">
+            <titulo_rev>Tan Interesante</titulo_rev>
+            <num_revista>35</num_revista>
+            <indice>
+            </indice>
+            <secciones> 
+                <seccion num_paginas="11">
+                    <contenido enlace="https://taninteresnate.com/01"/>
+                </seccion>
+                <seccion num_paginas="12">
+                    <contenido enlace="https://taninteresnate.com/02"/>
+                </seccion>
+                <seccion num_paginas="5">
+                    <contenido enlace="https://taninteresnate.com/03"/>
+                </seccion>
+            </secciones>
+            
+        </revista>
+        <revista id="R002" tipo_clase="coches" num_paginas="66">
+            <titulo_rev>Octano Extra</titulo_rev>
+            <num_revista>12</num_revista>
+            <indice>
+            </indice>
+            <secciones>
+                <seccion num_paginas="11">
+                    <contenido enlace="https://octanoextra.com/11"/>
+                </seccion>
+                <seccion num_paginas="7">
+                    <contenido enlace="https://octanoextra.com/7"/>
+                </seccion>
+                <seccion num_paginas="8">
+                    <contenido enlace="https://octanoextra.com/8"/>
+                </seccion>
+            </secciones>
+        </revista>
+
+        <revista id="R03" tipo_clase="informatica" num_paginas="59">
+            <titulo_rev>4 bits</titulo_rev>
+            <num_revista>26</num_revista>
+            <indice>
+            </indice>
+            <secciones>
+                <seccion num_paginas="8">
+                    <contenido enlace="https://4bits.com/8"/>
+                </seccion>
+                <seccion num_paginas="16">
+                    <contenido enlace="https://4bits.com/16"/>
+                </seccion>
+                <seccion num_paginas="3">
+                    <contenido enlace="https://4bits.com/3"/>
+                </seccion>
+            </secciones>
+        </revista>
+    </revistas>
+
+    <periodicos>
+        <periodico id="P0003" tipo_clase="nacionales" fec_publi="2023-04-10">
+            <secciones_per>
+                <seccion_per tipo="economica">
+                    <articulos>
+                        <articulo autor="Lola Lang">
+                            <contenido enlace="https://laverdad.com/lola" />
+                        </articulo>
+                        <articulo autor="Augusto Agarz">
+                            <contenido enlace="https://laverdad.com/augus" />
+                        </articulo>
+                    </articulos>
+                </seccion_per>
+                <seccion_per tipo="deportes">
+                    <articulos>
+                        <articulo autor="Tom Roncillo">
+                            <contenido enlace="https://laverdad.com/tomr" />
+                        </articulo>
+                        <articulo autor="Elena Guesh">
+                            <contenido enlace="https://laverdad.com/guesh" />
+                        </articulo>    
+                    </articulos>
+                </seccion_per>
+                <seccion_per tipo="opinion">
+                    <articulos>
+                        <articulo autor="Wan Open">
+                            <contenido enlace="https://laverdad.com/wan" />
+                        </articulo>
+                        <articulo autor="Svan Kruk">
+                            <contenido enlace="https://laverdad.com/kruk" />   
+                        </articulo> 
+                    </articulos>
+                </seccion_per>
+            </secciones_per>     
+            <indice>
+            </indice>
+        </periodico>
+
+        <periodico id="P0012" tipo_clase="internacionales" fec_publi="2023-04-12">
+            <secciones_per>
+                <seccion_per tipo="nacional">
+                    <articulos>
+                        <articulo autor="Oliver Terun" >
+                            <contenido enlace="https://laverdad.com/oli" />
+                        </articulo>
+                        <articulo autor="Lilibeth Oz">
+                            <contenido enlace="https://laverdad.com/oz" />
+                        </articulo>
+                    </articulos>
+                </seccion_per>
+                <seccion_per tipo="internacional">
+                    <articulos>
+                        <articulo autor="Ahmed Chidit">
+                            <contenido enlace="https://laverdad.com/ahmed" />
+                        </articulo>
+                        <articulo autor="Ernesto Fitzgerald">
+                            <contenido enlace="https://laverdad.com/erni" />   
+                        </articulo>
+                    </articulos>
+                </seccion_per>
+                <seccion_per tipo="deportes">
+                    <articulos>
+                        <articulo autor="Tyson Mcnamara">
+                            <contenido enlace="https://laverdad.com/tyson" />
+                        </articulo>
+                        <articulo autor="Virgil Atlyn">
+                            <contenido enlace="https://laverdad.com/atlyn" /> 
+                        </articulo> 
+                    </articulos>
+                </seccion_per>
+            </secciones_per>     
+            <indice>
+            </indice>
+        </periodico>
+        
+    </periodicos>
+
+</biblioteca>

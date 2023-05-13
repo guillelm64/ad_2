@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
+    <libros>
+        <libro id="L0001" tipo_clase="Novela" num_paginas="238">
+            <titulo>El cobertijo azul</titulo>
+            <capitulos>
+                <capitulo num_paginas="20">
+                    <titulo>Tio Joe</titulo>
+                    <contenido enlace="https://informacion.com/joe"/>
+                </capitulo>
+                <capitulo num_paginas="23">
+                    <titulo>Tia Anne</titulo>
+                    <contenido enlace="https://informacion.com/anne"/>
+                </capitulo>
+                <capitulo num_paginas="19">
+                    <titulo>Primo Jack</titulo>
+                    <contenido enlace="https://informacion.com/jack"/>
+                </capitulo>
+            </capitulos>
+            <indice></indice>
+            <sinopsis>La vida de Jupber estaba tomando forma cuando...</sinopsis>
+        </libro>
+        <libro id="L0002" tipo_clase="Infantil" num_paginas="25">
+            <titulo>El pollo rosa</titulo>
+            <capitulos>
+                <capitulo num_paginas="4">
+                    <titulo>Cole nuevo</titulo>
+                    <contenido enlace="https://informacion_2.com/cole"/>
+                </capitulo>
+                <capitulo num_paginas="7">
+                    <titulo>Nuevo amigo</titulo>
+                    <contenido enlace="https://informacion_2.com/amigo"/>
+                </capitulo>
+                <capitulo num_paginas="6">
+                    <titulo>El cumpleaños</titulo>
+                    <contenido enlace="https://informacion_2.com/cumple"/>
+                </capitulo>
+            </capitulos>
+            <indice></indice>
+            <sinopsis>El Pollo Rosa es un cuento infantil pensado para...</sinopsis>
+        </libro>
+        <libro id="L0003" tipo_clase="Didactico" num_paginas="538">
+            <titulo>Secretos del Universo</titulo>
+            <capitulos>
+                <capitulo num_paginas="56">
+                    <titulo>La mota de polvo</titulo>
+                    <contenido enlace="https://informacion_3.com/polvo"/>
+                </capitulo>
+                <capitulo num_paginas="63">
+                    <titulo>¿Fue una explosión?</titulo>
+                    <contenido enlace="https://informacion_3.com/explosion"/>
+                </capitulo>
+                <capitulo num_paginas="43">
+                    <titulo>Mas rapido que la velocidad de la luz</titulo>
+                    <contenido enlace="https://informacion_3.com/laluz"/>
+                </capitulo>
+            </capitulos>
+            <indice></indice>
+            <sinopsis>Este libro descubrirá la insmensidad del desconocimiento sobre...</sinopsis>
+        </libro>
+    </libros>
+    <revistas>
+        <revista id="R01" tipo_clase="Investigacion" num_paginas="89">
+            <titulo>Tan Interesante</titulo>
+            <num_revista>35</num_revista>
+            <indice>
+            </indice>
+            <secciones> 
+                <seccion num_paginas="11">
+                    <contenido enlace="https://taninteresnate.com/01"/>
+                </seccion>
+                <seccion num_paginas="12">
+                    <contenido enlace="https://taninteresnate.com/02"/>
+                </seccion>
+                <seccion num_paginas="5">
+                    <contenido enlace="https://taninteresnate.com/03"/>
+                </seccion>
+            </secciones>
+            
+        </revista>
+        <revista id="R002" tipo_clase="Coches" num_paginas="66">
+            <titulo>Octano Extra</titulo>
+            <num_revista>12</num_revista>
+            <indice>
+            </indice>
+            <secciones>
+                <seccion num_paginas="11">
+                    <contenido enlace="https://octanoextra.com/11"/>
+                </seccion>
+                <seccion num_paginas="7">
+                    <contenido enlace="https://octanoextra.com/7"/>
+                </seccion>
+                <seccion num_paginas="8">
+                    <contenido enlace="https://octanoextra.com/8"/>
+                </seccion>
+            </secciones>
+        </revista>
+
+        <revista id="R03" tipo_clase="Informatica" num_paginas="59">
+            <titulo>4 bits</titulo>
+            <num_revista>26</num_revista>
+            <indice>
+            </indice>
+            <secciones>
+                <seccion num_paginas="8">
+                    <contenido enlace="https://4bits.com/8"/>
+                </seccion>
+                <seccion num_paginas="16">
+                    <contenido enlace="https://4bits.com/16"/>
+                </seccion>
+                <seccion num_paginas="3">
+                    <contenido enlace="https://4bits.com/3"/>
+                </seccion>
+            </secciones>
+        </revista>
+    </revistas>
+
+    <periodicos>
+        <periodico id="P0003" tipo_clase="Nacionales" fec_publi="2023-04-10">
+            <secciones>
+                <seccion tipo="economica">
+                    <articulos>
+                        <articulo autor="Lola Lang">
+                            <contenido enlace="https://laverdad.com/lola" />
+                        </articulo>
+                        <articulo autor="Augusto Agarz">
+                            <contenido enlace="https://laverdad.com/augus" />
+                        </articulo>
+                    </articulos>
+                </seccion>
+                <seccion tipo="deportes">
+                    <articulos>
+                        <articulo autor="Tom Roncillo">
+                            <contenido enlace="https://laverdad.com/tomr" />
+                        </articulo>
+                        <articulo autor="Elena Guesh">
+                            <contenido enlace="https://laverdad.com/guesh" />
+                        </articulo>    
+                    </articulos>
+                </seccion>
+                <seccion tipo="opinion">
+                    <articulos>
+                        <articulo autor="Wan Open">
+                            <contenido enlace="https://laverdad.com/wan" />
+                        </articulo>
+                        <articulo autor="Svan Kruk">
+                            <contenido enlace="https://laverdad.com/kruk" />   
+                        </articulo> 
+                    </articulos>
+                </seccion>
+            </secciones>     
+            <indice>
+            </indice>
+        </periodico>
+
+        <periodico id="P0012" tipo_clase="Internacionales" fec_publi="2023-04-12">
+            <secciones>
+                <seccion tipo="nacional">
+                    <articulos>
+                        <articulo autor="Oliver Terun" >
+                            <contenido enlace="https://laverdad.com/oli" />
+                        </articulo>
+                        <articulo autor="Lilibeth Oz">
+                            <contenido enlace="https://laverdad.com/oz" />
+                        </articulo>
+                    </articulos>
+                </seccion>
+                <seccion tipo="internacional">
+                    <articulos>
+                        <articulo autor="Ahmed Chidit">
+                            <contenido enlace="https://laverdad.com/ahmed" />
+                        </articulo>
+                        <articulo autor="Ernesto Fitzgerald">
+                            <contenido enlace="https://laverdad.com/erni" />   
+                        </articulo>
+                    </articulos>
+                </seccion>
+                <seccion tipo="deportes">
+                    <articulos>
+                        <articulo autor="Tyson Mcnamara">
+                            <contenido enlace="https://laverdad.com/tyson" />
+                        </articulo>
+                        <articulo autor="Virgil Atlyn">
+                            <contenido enlace="https://laverdad.com/atlyn" /> 
+                        </articulo> 
+                    </articulos>
+                </seccion>
+            </secciones>     
+            <indice>
+            </indice>
+        </periodico>
+        
+    </periodicos>
+
+</biblioteca>
