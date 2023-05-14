@@ -9,7 +9,7 @@
                     <titulo>Tio Joe</titulo>
                     <contenido enlace="https://informacion.com/joe"/>
                 </capitulo>
-                <capitulo num_paginas="23">
+                <capitulo num_paginas="27">
                     <titulo>Tia Anne</titulo>
                     <contenido enlace="https://informacion.com/anne"/>
                 </capitulo>

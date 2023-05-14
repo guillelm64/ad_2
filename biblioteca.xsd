@@ -26,11 +26,14 @@
                                                                 <element name="titulo" type="string" minOccurs="1" maxOccurs="1"/> 
                                                                 <element name="contenido" minOccurs="1" maxOccurs="1">
                                                                     <complexType>
-                                                                        <simpleContent>
-                                                                            <extension base="string">
-                                                                                <attribute name="enlace" type="string" use="required"/>
-                                                                            </extension>
-                                                                        </simpleContent>
+                                                                        <attribute name="enlace" use="required">
+                                                                            <simpleType>
+                                                                                <restriction base="anyURI">
+                                                                                    <pattern value="https://.*">                                                                                
+                                                                                    </pattern>                                                                           
+                                                                                 </restriction>                                                                           
+                                                                            </simpleType>
+                                                                        </attribute>
                                                                     </complexType>
                                                                 </element>
                                                             </sequence>
@@ -82,11 +85,14 @@
                                                             <sequence>
                                                                 <element name="contenido" minOccurs="1" maxOccurs="1">
                                                                     <complexType>
-                                                                        <simpleContent>
-                                                                            <extension base="string">
-                                                                                <attribute name="enlace" type="string"></attribute>
-                                                                            </extension>
-                                                                        </simpleContent>
+                                                                        <attribute name="enlace" use="required">
+                                                                            <simpleType>
+                                                                                <restriction base="anyURI">
+                                                                                    <pattern value="https://.*">                                                                                
+                                                                                    </pattern>                                                                           
+                                                                                 </restriction>                                                                           
+                                                                            </simpleType>
+                                                                        </attribute>
                                                                     </complexType>
                                                                 </element>
                                                             </sequence>
@@ -141,11 +147,14 @@
                                                                                     <sequence>
                                                                                         <element name="contenido" minOccurs="0" maxOccurs="1">
                                                                                             <complexType>
-                                                                                                <simpleContent>
-                                                                                                    <extension base="string">
-                                                                                                        <attribute name="enlace" type="string"></attribute>
-                                                                                                    </extension>
-                                                                                                </simpleContent>
+                                                                                                <attribute name="enlace" use="required">
+                                                                                                    <simpleType>
+                                                                                                        <restriction base="anyURI">
+                                                                                                            <pattern value="https://.*">                                                                                
+                                                                                                            </pattern>                                                                           
+                                                                                                        </restriction>                                                                           
+                                                                                                    </simpleType>
+                                                                                                </attribute>
                                                                                             </complexType>
                                                                                         </element>
                                                                                     </sequence>
